@@ -1,0 +1,50 @@
+AMR Prediction — Evaluation Report
+Test set size: 67
+  Resistant: 10
+  Susceptible: 57
+
+============================================================
+  MODEL: LightGBM
+============================================================
+  Macro F1-Score:                0.7018
+  Matthews Correlation Coeff:    0.5169
+
+  Confusion Matrix:
+                Predicted
+                S       R
+  Actual S      57       0
+  Actual R       7       3
+
+  Classification Report:
+                  precision    recall  f1-score   support
+    
+     Susceptible       0.89      1.00      0.94        57
+       Resistant       1.00      0.30      0.46        10
+    
+        accuracy                           0.90        67
+       macro avg       0.95      0.65      0.70        67
+    weighted avg       0.91      0.90      0.87        67
+    
+
+============================================================
+  MODEL: XGBoost
+============================================================
+  Macro F1-Score:                0.8581
+  Matthews Correlation Coeff:    0.7488
+
+  Confusion Matrix:
+                Predicted
+                S       R
+  Actual S      57       0
+  Actual R       4       6
+
+  Classification Report:
+                  precision    recall  f1-score   support
+    
+     Susceptible       0.93      1.00      0.97        57
+       Resistant       1.00      0.60      0.75        10
+    
+        accuracy                           0.94        67
+       macro avg       0.97      0.80      0.86        67
+    weighted avg       0.94      0.94      0.93        67
+    
