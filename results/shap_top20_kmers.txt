@@ -1,26 +1,26 @@
 Top 20 Most Important 31-mer Features (SHAP TreeExplainer)
 Model: LightGBM
-SHAP samples: 67
+SHAP samples: 200
 
 Rank	SHAP Importance	31-mer Sequence                    	Direction
 ------------------------------------------------------------------------------------------
-   1	       0.674221	GCGTTGAGTGGATTGGGCAGGTGCCGGAGCA    	Promotes Susceptibility
-   2	       0.570497	AGGGGTCGGTTCCGGCTGAGGGCGAAATGAC    	Promotes Resistance
-   3	       0.384967	GCTCCGGCACCTGCCCAATCCACTCAACGCC    	Promotes Susceptibility
-   4	       0.225955	AGTATGGGTGTGCTTTTAAAGCCTTTAAGGG    	Promotes Resistance
-   5	       0.191393	ATGCCGCGGATATCAATCTGGCGGTTGTTGC    	Promotes Susceptibility
-   6	       0.140333	AATTGCTCACAGCCAAACTATCAGGTCAAGT    	Promotes Susceptibility
-   7	       0.091783	AAGCGGGAATCCCAGAAAATTCCGTCATTCC    	Promotes Resistance
-   8	       0.087908	ACCATCAATATCATCATATCGAATACTCAGC    	Promotes Susceptibility
-   9	       0.083840	AGTCCAGCGCGAACGTGACCCGCAGTTTTTC    	Promotes Susceptibility
-  10	       0.083721	CGCGTGTCGCGCTGGCCCCGAAGGGGTGAGC    	Promotes Resistance
-  11	       0.083368	TATTGAACTGTCAGGAGCTGGCTGCACAACA    	Promotes Susceptibility
-  12	       0.079677	ACCCCATGCCGAACTCAGAAGTGAAACGCCG    	Promotes Resistance
-  13	       0.079666	CTGAGTTCGGCATGGGGTCAGGTGGGACCAC    	Promotes Resistance
-  14	       0.078779	CCAATGGCACTGCCCGGTAGCTAAATGCGGA    	Promotes Resistance
-  15	       0.077952	TACGAAATCAACACGTTGGTATCATTACCCA    	Promotes Susceptibility
-  16	       0.077483	AGCGGGAATCCCAGAAAATTCCGTCATTCCG    	Promotes Resistance
-  17	       0.071592	GCAGCAGGGCAGTCGCCCTAAAACAAAGTTA    	Promotes Resistance
-  18	       0.070798	GGCAACAACCGCCAGATTGATATCCGCGGCA    	Promotes Susceptibility
-  19	       0.067684	AAAAGAGGAACGAAAAATATTTTTCGTTCCT    	Promotes Susceptibility
-  20	       0.066063	GGCACTGCCCGGTAGCTAAATGCGGAAGAGA    	Promotes Resistance
+   1	       0.929385	GCGTTGAGTGGATTGGGCAGGTGCCGGAGCA    	Promotes Susceptibility
+   2	       0.663285	GCTCCGGCACCTGCCCAATCCACTCAACGCC    	Promotes Susceptibility
+   3	       0.248335	AGTATGGGTGTGCTTTTAAAGCCTTTAAGGG    	Promotes Susceptibility
+   4	       0.146628	CCTAGATTCTACGTCAGTACTTCAAAAAGCA    	Promotes Resistance
+   5	       0.123309	TAGGCCCGCGCAAGCGCAGCGCCGCCGGGCA    	Promotes Resistance
+   6	       0.116559	CCAATGGCACTGCCCGGTAGCTAAATGCGGA    	Promotes Susceptibility
+   7	       0.112485	CAACCAGCGCTGGCGTGATTTAGCGCCGACG    	Promotes Resistance
+   8	       0.103443	AGGGGTCGGTTCCGGCTGAGGGCGAAATGAC    	Promotes Susceptibility
+   9	       0.103176	AAAAGAGGAACGAAAAATATTTTTCGTTCCT    	Promotes Susceptibility
+  10	       0.101545	GGCACCATCGAACTGCCGGAAGGCGTAGAGA    	Promotes Susceptibility
+  11	       0.096223	AAAAGTACATCAAAATTACATCAAAATTACA    	Promotes Resistance
+  12	       0.091412	AAAGTACATCAAAATTACATCAAAATTACAT    	Promotes Resistance
+  13	       0.082461	ATGAGCCCGACGAGCTACCAGGCTGCTCCAC    	Promotes Resistance
+  14	       0.077715	AAAGAGGAACGAAAAATATTTTTCGTTCCTC    	Promotes Susceptibility
+  15	       0.076067	ACTCAGCGCATTGAGCGACATAACCTGAATC    	Promotes Resistance
+  16	       0.073119	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA    	Promotes Resistance
+  17	       0.071422	ACCACCATTTGCCCCATATCACCGTCGGTAC    	Promotes Resistance
+  18	       0.071023	AAAAGGAAAACTTGATGGAATTGCCCAATAT    	Promotes Susceptibility
+  19	       0.068159	ACAAGATAACAAGATAACAAGATAACAAGAT    	Promotes Resistance
+  20	       0.067951	AAAGGAAAACTTGATGGAATTGCCCAATATT    	Promotes Susceptibility

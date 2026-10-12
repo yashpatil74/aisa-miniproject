@@ -22,7 +22,7 @@ LABELS_CSV   = os.path.join(PROJECT_ROOT, "data", "labels_final.csv")
 OUTPUT_CSV   = os.path.join(PROJECT_ROOT, "data", "split_labels.csv")
 
 # ── Parameters ───────────────────────────────────────────────────────────────
-ANI_THRESHOLD = 0.05   # Mash distance ≤ 0.05 ≈ 95% ANI
+ANI_THRESHOLD = 0.001  # Mash distance ≤ 0.001 ≈ 99.9% ANI (clonal outbreak threshold)
 TEST_SIZE     = 0.20   # 80/20 train/test
 RANDOM_SEED   = 42
 

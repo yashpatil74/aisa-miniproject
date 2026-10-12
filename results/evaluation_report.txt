@@ -1,50 +1,74 @@
 AMR Prediction — Evaluation Report
-Test set size: 67
-  Resistant: 10
-  Susceptible: 57
+Test set size: 979
+  Resistant: 309
+  Susceptible: 670
 
 ============================================================
   MODEL: LightGBM
 ============================================================
-  Macro F1-Score:                0.7018
-  Matthews Correlation Coeff:    0.5169
+  Macro F1-Score:                0.8552
+  Matthews Correlation Coeff:    0.7144
+  ROC-AUC Score:                 0.9104
+  PR-AUC (Average Precision):    0.8520
 
-  Confusion Matrix:
+  Confusion Matrix (Threshold 0.50):
                 Predicted
                 S       R
-  Actual S      57       0
-  Actual R       7       3
+  Actual S     631      39
+  Actual R      79     230
 
-  Classification Report:
+  Classification Report (Threshold 0.50):
                   precision    recall  f1-score   support
     
-     Susceptible       0.89      1.00      0.94        57
-       Resistant       1.00      0.30      0.46        10
+     Susceptible       0.89      0.94      0.91       670
+       Resistant       0.86      0.74      0.80       309
     
-        accuracy                           0.90        67
-       macro avg       0.95      0.65      0.70        67
-    weighted avg       0.91      0.90      0.87        67
+        accuracy                           0.88       979
+       macro avg       0.87      0.84      0.86       979
+    weighted avg       0.88      0.88      0.88       979
     
+
+  --- Optimal Decision Threshold Analysis ---
+  Optimal Threshold:             0.13
+  Macro F1 at Optimal Thresh:    0.8620
+  MCC at Optimal Thresh:         0.7246
+  Confusion Matrix (Threshold 0.13):
+                Predicted
+                S       R
+  Actual S     621      49
+  Actual R      66     243
 
 ============================================================
   MODEL: XGBoost
 ============================================================
-  Macro F1-Score:                0.8581
-  Matthews Correlation Coeff:    0.7488
+  Macro F1-Score:                0.8385
+  Matthews Correlation Coeff:    0.6775
+  ROC-AUC Score:                 0.9086
+  PR-AUC (Average Precision):    0.8486
 
-  Confusion Matrix:
+  Confusion Matrix (Threshold 0.50):
                 Predicted
                 S       R
-  Actual S      57       0
-  Actual R       4       6
+  Actual S     609      61
+  Actual R      74     235
 
-  Classification Report:
+  Classification Report (Threshold 0.50):
                   precision    recall  f1-score   support
     
-     Susceptible       0.93      1.00      0.97        57
-       Resistant       1.00      0.60      0.75        10
+     Susceptible       0.89      0.91      0.90       670
+       Resistant       0.79      0.76      0.78       309
     
-        accuracy                           0.94        67
-       macro avg       0.97      0.80      0.86        67
-    weighted avg       0.94      0.94      0.93        67
+        accuracy                           0.86       979
+       macro avg       0.84      0.83      0.84       979
+    weighted avg       0.86      0.86      0.86       979
     
+
+  --- Optimal Decision Threshold Analysis ---
+  Optimal Threshold:             0.47
+  Macro F1 at Optimal Thresh:    0.8410
+  MCC at Optimal Thresh:         0.6821
+  Confusion Matrix (Threshold 0.47):
+                Predicted
+                S       R
+  Actual S     605      65
+  Actual R      69     240

@@ -15,6 +15,10 @@ Output: results/shap_top20_kmers.txt
 
 import os
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import scripts.common
+
 import pickle
 import numpy as np
 import pandas as pd

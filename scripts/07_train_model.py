@@ -11,6 +11,11 @@ Output: models/lightgbm_model.txt
 
 import os
 import sys
+
+# Ensure library path
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import scripts.common
+
 import pickle
 import numpy as np
 import pandas as pd
@@ -92,7 +97,7 @@ def train_lightgbm(X_train, y_train, scale_pos_weight):
         verbose=-1,
         n_jobs=4,
         max_bin=63,
-        device="gpu",
+        device="cpu",
     )
 
     model.fit(X_train, y_train)
