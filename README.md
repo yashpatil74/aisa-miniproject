@@ -117,12 +117,17 @@ Bacteria reproduce clonally via binary fission. A single hospital outbreak can r
 │   ├── xgboost_model.json        # Native XGBoost model
 │   └── xgb_sklearn.pkl           # Scikit-learn wrapper for XGBoost
 ├── results/
-│   ├── confusion_matrix_lightgbm.png  # Confusion matrix plot for LightGBM
-│   ├── confusion_matrix_xgboost.png   # Confusion matrix plot for XGBoost
-│   ├── evaluation_report.txt          # Detailed evaluation metrics
-│   ├── shap_summary.png               # SHAP feature importance beeswarm plot
-│   ├── shap_top20_kmers.txt           # Ranked table of top 20 31-mers
-│   └── top20_kmers.fasta              # BLAST-ready FASTA of top predictive k-mers
+│   ├── confusion_matrix_lightgbm.png        # Confusion matrix plot for LightGBM
+│   ├── confusion_matrix_xgboost.png         # Confusion matrix plot for XGBoost
+│   ├── evaluation_report.txt                # Detailed evaluation metrics (AUC, F1, MCC)
+│   ├── plot1_roc_and_pr_curves.png          # Clinical ROC and Precision-Recall curves
+│   ├── plot2_clonal_distance_ani_distribution.png # 95% vs 99.9% ANI distance distribution
+│   ├── plot3_model_benchmark_comparison.png # Before vs After model performance benchmark
+│   ├── plot4_clinical_threshold_tuning.png  # Sensitivity/Specificity threshold trade-offs
+│   ├── plot5_top20_shap_kmers.png           # Ranked top 20 SHAP features with direction
+│   ├── shap_summary.png                     # SHAP beeswarm importance plot
+│   ├── shap_top20_kmers.txt                 # Ranked table of top 20 31-mers
+│   └── top20_kmers.fasta                    # BLAST-ready FASTA of top predictive k-mers
 └── scripts/
     ├── common.py                 # Shared environment & OpenMP runtime loader
     ├── 02_prepare_labels.py      # Phase 1: Label deduplication and cleaning
@@ -133,7 +138,8 @@ Bacteria reproduce clonally via binary fission. A single hospital outbreak can r
     ├── 07_train_model.py         # Phase 6: Model training (LightGBM & XGBoost)
     ├── 08_evaluate.py            # Phase 7: Model evaluation & threshold analysis
     ├── 09_shap_analysis.py       # Phase 8: SHAP analysis & CARD export
-    └── 10_predict_genome.py      # Phase 9: CLI inference for unseen genomes
+    ├── 10_predict_genome.py      # Phase 9: CLI inference for unseen genomes
+    └── 11_generate_plots.py      # Phase 10: Publication-grade figures (300 DPI)
 ```
 
 ---
@@ -194,6 +200,12 @@ python scripts/09_shap_analysis.py
 python scripts/10_predict_genome.py path/to/sample.fna
 ```
 *Prints resistance status and calibrated confidence score.*
+
+### Step 9: Generate Publication-Grade Visualizations
+```bash
+python scripts/11_generate_plots.py
+```
+*Generates all 5 high-resolution figures (`plot1` to `plot5`) in `results/`.*
 
 ---
 
